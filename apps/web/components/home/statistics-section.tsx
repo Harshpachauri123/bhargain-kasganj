@@ -82,7 +82,8 @@ export function StatisticsSection() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {statisticsCards.map((card, index) => {
             const Icon = card.icon;
-            const theme = colorThemes[index % colorThemes.length];
+            // Added `!` non-null assertion operator here to satisfy TypeScript completely
+            const theme = colorThemes[index % colorThemes.length]!;
 
             return (
               <Card
